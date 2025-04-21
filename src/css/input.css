@@ -1,0 +1,110 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Comic Neue", cursive;
+  --font-body: "Comic Neue", cursive;
+  --font-mono: "Comic Neue", cursive;
+  --color-primary: #18181a;
+  --color-secondary: #ffffff;
+  --color-accent: #f97316;
+  --color-accent-light: #fbbf24;
+  --color-accent-dark: #f97316;
+  --color-background: #18181a;
+  --color-background-light: #ffffff;
+  --color-background-dark: #000000;
+}
+
+/* tailwind component */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-display);
+}
+header {
+  background-color: #18181a;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+header h1 {
+  /* text-align: center; */
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#hero h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+#hero p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+  /* border: 1px solid #b9b0b0; */
+}
+.container {
+  border: 1px solid #b9b0b0;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 2px #0e0c0c;
+
+}
+form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+  margin: 20px 0;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #18181a;
+  border-radius: 5px;
+  font-family: var(--font-display);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px #f5efef;
+}
+label {
+  font-size: 0.975rem;
+  font-weight: 700;
+  margin-top: 0.875rem;
+  display: block;
+}
+input {
+  /* display: block; */
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  border: 1px solid #b9b0b0;
+  border-radius: 5px;
+}

@@ -1,0 +1,62 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizifyJS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="./index.html">QuizifyJS</a>
+      </h1>
+
+      <nav>
+        <!-- <ul>
+          <li><a href="create-quiz.html">Create a Quiz</a></li>
+          <li><a href="take-quiz.html">Take a Quiz</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul> -->
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1>Welcome to QuizifyJS</h1>
+        <p>Your ultimate quiz platform!</p>
+      </section>
+      <section id="about">
+        <p>
+          QuizifyJS is a fun and interactive quiz platform where you can create,
+          take, and share quizzes with friends and family. Whether you're
+          looking to test your knowledge or challenge others, QuizifyJS has
+          something for everyone!
+        </p>
+
+        <div class="btn-grid">
+          <button type="button" class="btn" id="login-button">Login In</button>
+          <button type="button" class="btn" id="signup-button">Sign Up</button>
+          <button type="button" class="btn">Guest</button>
+        </div>
+      </section>
+    </main>
+    <script>
+      document
+        .getElementById("login-button")
+        .addEventListener("click", function () {
+          window.location.href = "../public/login.html";
+        });
+      document
+        .getElementById("signup-button")
+        .addEventListener("click", function () {
+          window.location.href = "../public/signup.html";
+        });
+      querySelector("#guest-button").addEventListener("click", function () {
+        window.location.href = "/guest.html";
+      });
+    </script>
+  </body>
+</html>
