@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="../dist/style.css" />
+
+    <script type="module" src="../pages/signup.js"></script>
+    <!-- <script type="module" src="../js/utils.js"></script> -->
+
+
   </head>
   <body>
     <header>
@@ -23,19 +28,20 @@
       </nav>
     </header>
     <main>
-      <div
-        class="container"
-      >
-        <form>
+      <div class="container">
+        <form id="signup-form">
           <h2>Create an account</h2>
-          <label for="username">Name:
-          <input type="text" id="name" name="name" required /></label>
+          <label for="username"
+            >Name: <input type="text" id="name" name="name"
+          /></label>
 
-          <label for="email">Email:
-          <input type="email" id="email" name="email" required /></label>
+          <label for="email"
+            >Email: <input type="email" id="email" name="email"
+          /></label>
 
-          <label for="password">Password:
-          <input type="password" id="password" name="password" required /></label>
+          <label for="password"
+            >Password: <input type="password" id="password" name="password"
+          /></label>
 
           <button
             type="submit"
