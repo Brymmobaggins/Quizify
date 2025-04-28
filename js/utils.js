@@ -1,10 +1,10 @@
 /** @format */
 
+//  function to show messages
 export function showError(mesage, color) {
   const div = document.createElement("div");
   div.textContent = mesage;
   div.style.color = color;
-  div.style.position = "fixed";
 
   document.body.appendChild(div);
   setTimeout(() => {
@@ -12,4 +12,23 @@ export function showError(mesage, color) {
   }, 3000);
 }
 
-// export function clearfiel
+export function isPasswordValid(password) {
+  let strengthIndicator = document.querySelector("small");
+
+  let strength = "weak";
+  let color = "red";
+
+  if (password.length == 6) {
+    color = "orange";
+    strength = "fair";
+  } else if (password.length > 6) {
+    color = "green";
+    strength = "strong";
+  }
+
+  strengthIndicator.textContent = `${strength}`;
+  strengthIndicator.style.color = color;
+}
+document.getElementById("password").addEventListener("input", (e) => {
+  isPasswordValid(e.target.value);
+});

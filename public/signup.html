@@ -7,16 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="../dist/style.css" />
-<<<<<<< HEAD
-
-    <script type="module" src="../pages/signup.js"></script>
-    <!-- <script type="module" src="../js/utils.js"></script> -->
-
-
-=======
     <!-- the script to be excecuted before the DOM -->
     <script type="module" src="../pages/signup.js" defer></script>
->>>>>>> feature/login
   </head>
   <body>
     <header>
@@ -35,7 +27,9 @@
     <main>
       <div class="container">
         <form id="signup-form">
-          <h2>Create an account</h2>
+          <h2>Sign Up</h2>
+          <p>Please fill in the form to create an account</p>
+          <hr>
           <label for="username"
             >Name: <input type="text" id="name" name="name"
           /></label>
@@ -47,15 +41,25 @@
           <label for="password"
             >Password: <input type="password" id="password" name="password"
           /></label>
+          <small></small>
 
+          <label>
+            <input
+              type="checkbox"
+              name="remember"
+              style="margin-bottom: 10px"
+            />
+            Remember me
+          </label>
           <button
             type="submit"
             id="
           signup-btn"
             class="w-full block h-10 mt-4 bg-[#000] text-white rounded cursor-pointer"
           >
-            Submit
+            Sign Up
           </button>
+          <p class="text-center mt-4">Do you have an account ?<a href="./login.html">Login</a></p>
         </form>
       </div>
     </main>

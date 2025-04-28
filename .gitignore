@@ -1,4 +1,5 @@
 *.vscode
-*.hintrc
+*.hintrc 
+*.vscode
 
 node_modules

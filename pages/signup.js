@@ -6,7 +6,7 @@ const signUpForm = document.getElementById("signup-form");
 
 signUpForm.addEventListener("submit", (e) => {
   e.preventDefault(); // prevent form submission
-   
+
   // capture user fields
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -16,7 +16,11 @@ signUpForm.addEventListener("submit", (e) => {
     return showError("Fill in all field", "red");
   }
 
+  // if (isPasswordValid(password)) {
+  // }
+
   const users = JSON.parse(localStorage.getItem("users")) || [];
+  // check if users exists
   const userExists = users.find(
     (user) => user.name === name || user.email === email
   );
