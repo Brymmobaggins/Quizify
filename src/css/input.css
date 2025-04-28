@@ -96,11 +96,16 @@ form h2 {
 }
 label {
   font-size: 0.975rem;
-  font-weight: 700;
+  /* font-weight: 500; */
   margin-top: 0.875rem;
   display: block;
 }
-input {
+b{
+  font-weight: 400;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   /* display: block; */
   width: 100%;
   padding: 0.5rem 1rem;
