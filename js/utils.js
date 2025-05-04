@@ -1,7 +1,7 @@
 /** @format */
 
 //  function to show messages
-export function showError(mesage, color) {
+export function showMessage(mesage, color) {
   const div = document.createElement("div");
   div.textContent = mesage;
   div.style.color = color;
@@ -30,5 +30,5 @@ export function isPasswordValid(password) {
   strengthIndicator.style.color = color;
 }
 document.getElementById("password").addEventListener("input", (e) => {
-  isPasswordValid(e.target.value);
+  isPasswordValid(e.target.value)
 });
