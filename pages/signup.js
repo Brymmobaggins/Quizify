@@ -1,6 +1,6 @@
 /** @format */
 
-import { showError } from "../js/utils.js";
+import { showMessage } from "../js/utils.js";
 
 const signUpForm = document.getElementById("signup-form");
 
@@ -13,7 +13,7 @@ signUpForm.addEventListener("submit", (e) => {
   const password = document.getElementById("password").value.trim();
 
   if (!name || !email || !password) {
-    return showError("Fill in all field", "red");
+    return showMessage("Fill in all field", "red");
   }
 
   // if (isPasswordValid(password)) {
@@ -26,7 +26,7 @@ signUpForm.addEventListener("submit", (e) => {
   );
 
   if (userExists) {
-    return showError(
+    return showMessage(
       "You have already have an account, kindly Log in",
       "green"
     );
@@ -38,6 +38,14 @@ signUpForm.addEventListener("submit", (e) => {
     };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
+
+    // show success mesage
+    showError("Registration successful! Redirecting to login..")
+
+    // Redirect to login page after 2 seconds
+    setTimeout(() => {
+      window.location.href = "../public/login.html"
+    }, 2000);
   }
   //   clear field users enters
   document.getElementById("name").value = "";

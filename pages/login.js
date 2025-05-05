@@ -1,7 +1,4 @@
-import { showError } from "../js/utils.js"; 
-
-
-
+import { showMessage } from "../js/utils.js"; 
 
 const loginButton = document.getElementById("login-btn")
 
@@ -11,10 +8,8 @@ export function login(){
    const username = document.getElementById("username").value.trim()
    console.log(username)
     
-
-
    if(!username || !email){
-       return showError("kindly Log in", "red")
+       return showMessage("kindly Log in", "red")
     }
 
 
@@ -22,6 +17,6 @@ export function login(){
     const isUserValid = users.find((user) => user.name === username && user.email === email )
    
    if(!isUserValid){
-    return showError("You don't have account", "red")
+    return showMessage("You don't have account", "red")
    }
 }
