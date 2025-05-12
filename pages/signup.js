@@ -1,7 +1,7 @@
-/** @format */
+
+
 
 import { showMessage } from "../js/utils.js";
-
 const signUpForm = document.getElementById("signup-form");
 
 signUpForm.addEventListener("submit", (e) => {
@@ -16,9 +16,7 @@ signUpForm.addEventListener("submit", (e) => {
     return showMessage("Fill in all field", "red");
   }
 
-  // if (isPasswordValid(password)) {
-  // }
-
+  
   const users = JSON.parse(localStorage.getItem("users")) || [];
   // check if users exists
   const userExists = users.find(
@@ -31,6 +29,7 @@ signUpForm.addEventListener("submit", (e) => {
       "green"
     );
   } else {
+
     const newUser = {
       name,
       email,
@@ -39,12 +38,12 @@ signUpForm.addEventListener("submit", (e) => {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
-    // show success mesage
-    showError("Registration successful! Redirecting to login..")
-
+    // show success message
+    showMessage("Registration successful! Redirecting to login..");
+ 
     // Redirect to login page after 2 seconds
     setTimeout(() => {
-      window.location.href = "../public/login.html"
+      window.location.href = "../public/login.html";
     }, 2000);
   }
   //   clear field users enters

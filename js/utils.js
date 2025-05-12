@@ -12,8 +12,9 @@ export function showMessage(mesage, color) {
   }, 3000);
 }
 
-export function isPasswordValid(password) {
-  let strengthIndicator = document.querySelector("small");
+// function to show password strength
+export function passwordStrength(password) {
+  let strengthIndicator = document.getElementById("password-strength");
 
   let strength = "weak";
   let color = "red";
@@ -27,8 +28,12 @@ export function isPasswordValid(password) {
   }
 
   strengthIndicator.textContent = `${strength}`;
-  strengthIndicator.style.color = color;
+  strengthIndicator.style.color = color;``
 }
+
 document.getElementById("password").addEventListener("input", (e) => {
-  isPasswordValid(e.target.value)
+  passwordStrength(e.target.value);
 });
+
+
+
