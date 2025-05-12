@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="../dist/style.css" />
-    <!-- the script to be excecuted before the DOM -->
-    <script type="module" src="../pages/signup.js" defer></script>
   </head>
   <body>
     <header>
       <h1>
         <a href="../dist/index.html">QuizifyJS</a>
       </h1>
-  
+
       <nav>
         <!-- <ul>
           <li><a href="create-quiz.html">Create a Quiz</a></li>
@@ -29,7 +27,7 @@
         <form id="signup-form">
           <h2>Sign Up</h2>
           <p>Please fill in the form to create an account</p>
-          <hr>
+          <hr />
           <label for="username"
             >Name: <input type="text" id="name" name="name"
           /></label>
@@ -37,11 +35,12 @@
           <label for="email"
             >Email: <input type="email" id="email" name="email"
           /></label>
+          <small></small>
 
           <label for="password"
             >Password: <input type="password" id="password" name="password"
           /></label>
-          <small></small>
+          <small id="password-strength"></small>
 
           <label>
             <input
@@ -59,9 +58,14 @@
           >
             Sign Up
           </button>
-          <p class="text-center mt-4">Do you have an account ?<a href="./login.html">Login</a></p>
+          <p class="text-center mt-4">
+            Do you have an account ?<a href="./login.html">Login</a>
+          </p>
         </form>
       </div>
     </main>
+    
+    <!-- The script to execute after the DOM is fully loaded -->
+    <script type="module" src="../pages/signup.js" defer></script>
   </body>
 </html>
