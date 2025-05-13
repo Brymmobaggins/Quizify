@@ -1,5 +1,4 @@
-
-
+/** @format */
 
 import { showMessage } from "../js/utils.js";
 const signUpForm = document.getElementById("signup-form");
@@ -16,7 +15,6 @@ signUpForm.addEventListener("submit", (e) => {
     return showMessage("Fill in all field", "red");
   }
 
-  
   const users = JSON.parse(localStorage.getItem("users")) || [];
   // check if users exists
   const userExists = users.find(
@@ -29,18 +27,26 @@ signUpForm.addEventListener("submit", (e) => {
       "green"
     );
   } else {
+    // generate a username by combining the name and random number between 1 to 100
+    const username = `${name.replace(/\s+/g, "").toLowerCase()}${Math.floor(
+      Math.random() * 100
+    )}`;
 
     const newUser = {
       name,
       email,
       password,
+      username,
     };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
     // show success message
-    showMessage("Registration successful! Redirecting to login..");
- 
+    showMessage(
+      `Registration successful! Your username is "${username}" Redirecting to login..`,
+      "green"
+    );
+
     // Redirect to login page after 2 seconds
     setTimeout(() => {
       window.location.href = "../public/login.html";
