@@ -28,12 +28,12 @@ export function passwordStrength(password) {
   }
 
   strengthIndicator.textContent = `${strength}`;
-  strengthIndicator.style.color = color;``
+  strengthIndicator.style.color = color;
+  ``;
 }
 
-document.getElementById("password").addEventListener("input", (e) => {
-  passwordStrength(e.target.value);
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("password").addEventListener("input", (e) => {
+    passwordStrength(e.target.value);
+  });
 });
-
-
-
