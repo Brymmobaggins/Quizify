@@ -1,6 +1,6 @@
 /** @format */
 
-import { showMessage } from "../js/utils.js";
+import { showAlert } from "../js/utils.js";
 const signUpForm = document.getElementById("signup-form");
 
 signUpForm.addEventListener("submit", (e) => {
@@ -12,7 +12,7 @@ signUpForm.addEventListener("submit", (e) => {
   const password = document.getElementById("password").value.trim();
 
   if (!name || !email || !password) {
-    return showMessage("Fill in all field", "red");
+    return showAlert("Fill in all field", "red");
   }
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -22,12 +22,12 @@ signUpForm.addEventListener("submit", (e) => {
   );
 
   if (userExists) {
-    return showMessage(
+    return showAlert(
       "You have already have an account, kindly Log in",
       "green"
     );
   } else {
-    // generate a username by combining the name and random number between 1 to 100
+    // generate a username by combining the name  the user entered and append a random number between 1 to 100
     const username = `${name.replace(/\s+/g, "").toLowerCase()}${Math.floor(
       Math.random() * 100
     )}`;
@@ -41,8 +41,10 @@ signUpForm.addEventListener("submit", (e) => {
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
+    document.getElementById("container").style.display = "none";
+
     // show success message
-    showMessage(
+    showAlert(
       `Registration successful! Your username is "${username}" Redirecting to login..`,
       "green"
     );

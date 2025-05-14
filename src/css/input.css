@@ -30,6 +30,7 @@ body {
 }
 header {
   background-color: #18181a;
+  max-width: 1700px;
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: 700;
@@ -55,26 +56,26 @@ main {
   margin: 0 auto;
   width: 800px;
   max-width: 100%;
-  /* border: 1px solid #b9b0b0; */
+  border: 1px solid #d65757;
+  /* position: relative; */
 }
 .container {
   border: 1px solid #b9b0b0;
-  border-radius: 6px;
+  border-radius: 5px;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 2px #0e0c0c;
-
 }
 form h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 .btn-grid {
   display: grid;
@@ -95,12 +96,11 @@ form h2 {
   box-shadow: 0 0 5px #f5efef;
 }
 label {
-  font-size: 0.975rem;
-  /* font-weight: 500; */
+  font-size: 0.875rem;
   margin-top: 0.875rem;
   display: block;
 }
-b{
+b {
   font-weight: 400;
 }
 input[type="text"],
@@ -109,8 +109,8 @@ input[type="password"] {
   /* display: block; */
   font-weight: 500;
   width: 100%;
-  padding: 0.5rem 0.875rem;
+  padding: 0.5rem;
   box-sizing: border-box;
-  border: 1px solid #b9b0b0;
-  border-radius: 5px;
+  border: 0.5px solid #b9b0b0;
+  border-radius: 4px;
 }

@@ -1,6 +1,6 @@
 /** @format */
 
-import { showMessage } from "../js/utils.js";
+import { showAlert } from "../js/utils.js";
 
 const loginButton = document.getElementById("login-btn");
 loginButton.addEventListener("click", login);
@@ -10,7 +10,7 @@ export function login() {
   const password = document.getElementById("password").value.trim();
 
   if (!username || !password) {
-    return showMessage("Enter your username and password", "red");
+    return showAlert("Enter your username and password", "red");
   }
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -19,7 +19,7 @@ export function login() {
   );
 
   if (!isUserValid) {
-    return showMessage("your username or password is incorrect", "red");
+    return showAlert("your username or password is incorrect", "red");
   } else {
     setTimeout(() => {
       window.location.href = "../public/quizSelection.html";

@@ -1,16 +1,27 @@
 /** @format */
 
 //  function to show messages
-export function showMessage(mesage, color) {
-  const div = document.createElement("div");
-  div.textContent = mesage;
-  div.style.color = color;
+export function showAlert(mesage, color) {
+  const feedBackDiv = document.createElement("div");
+  feedBackDiv.textContent = mesage;
+  feedBackDiv.style.color = "#ffff"
+  feedBackDiv.style.backgroundColor = color
+  feedBackDiv.style.opacity = "0.5"
+  feedBackDiv.style.width = "400px"
+  // feedBackDiv.style.margin = "auto"
+  feedBackDiv.style.position = "absolute"
+  feedBackDiv.style.top = "22%"
+  feedBackDiv.style.left = "35.5%" 
+  feedBackDiv.style.padding = "0.55rem"
+  feedBackDiv.style.borderRadius = "5px"
+ 
 
-  document.body.appendChild(div);
+  document.body.appendChild(feedBackDiv);
+  
   setTimeout(() => {
-    div.remove();
+    feedBackDiv.remove();
   }, 3000);
-}
+} 
 
 // function to show password strength
 export function passwordStrength(password) {
