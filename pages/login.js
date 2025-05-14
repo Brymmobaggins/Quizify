@@ -25,4 +25,9 @@ export function login() {
       window.location.href = "../public/quizSelection.html";
     }, 2000);
   }
+
+
+  if(document.getElementById("keep-me").checked){
+    localStorage.setItem("loggedInUser", JSON.stringify(isUserValid))
+  }
 }
