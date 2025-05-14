@@ -28,22 +28,26 @@
         <form onsubmit="return false">
           <h2>Welcome Back</h2>
           <label for="username"
-            ><b>Username: </b> <input type="text" id="username"
+            >Username: <input type="text" id="username"
           /></label>
 
           <label for="password"
-            ><b>Password:</b> <input type="password" id="password"
+            >Password:<input type="password" id="password"
           /></label>
 
-          <div class="text-right">
-            <small class="text-xs">Forget Password</small>
-           
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <input type="checkbox"  style="margin-bottom: 10px" /> keep me
+              logged in
+            </div>
+
+            <div class="text-xl">Forget Password</div>
           </div>
 
           <button
             type="button"
             id="login-btn"
-            class="w-full block h-10 bg-[#000] text-white rounded cursor-pointer"
+            class="w-full block h-10 bg-[#000] text-white rounded cursor-pointer font-bold"
           >
             Login
           </button>

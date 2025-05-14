@@ -63,7 +63,8 @@ main {
   border: 1px solid #b9b0b0;
   border-radius: 5px;
   width: 100%;
-  max-width: 400px;
+  /* height: 40%; */
+  max-width: 350px;
   margin: 0 auto;
   padding: 0 5px;
   position: absolute;
@@ -85,6 +86,7 @@ form h2 {
 }
 .btn {
   padding: 0.5rem 1rem;
+  font-weight:700;
   color: white;
   font-size: 1.5rem;
   background-color: #18181a;
@@ -99,14 +101,15 @@ label {
   font-size: 0.875rem;
   margin-top: 0.875rem;
   display: block;
+  font-weight: bold;
+  /* width: 100%; */
 }
-b {
-  font-weight: 400;
-}
+
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  /* display: block; */
+  /* display: inline-block; */
   font-weight: 500;
   width: 100%;
   padding: 0.5rem;

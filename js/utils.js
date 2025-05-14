@@ -7,11 +7,11 @@ export function showAlert(mesage, color) {
   feedBackDiv.style.color = "#ffff"
   feedBackDiv.style.backgroundColor = color
   feedBackDiv.style.opacity = "0.5"
-  feedBackDiv.style.width = "400px"
+  feedBackDiv.style.width = "350px"
   // feedBackDiv.style.margin = "auto"
   feedBackDiv.style.position = "absolute"
   feedBackDiv.style.top = "22%"
-  feedBackDiv.style.left = "35.5%" 
+  feedBackDiv.style.left = "37%" 
   feedBackDiv.style.padding = "0.55rem"
   feedBackDiv.style.borderRadius = "5px"
  
