@@ -8,13 +8,11 @@
   --font-body: "Comic Neue", cursive;
   --font-mono: "Comic Neue", cursive;
   --color-primary: #18181a;
-  --color-secondary: #ffffff;
   --color-accent: #f97316;
   --color-accent-light: #fbbf24;
-  --color-accent-dark: #f97316;
-  --color-background: #18181a;
   --color-background-light: #ffffff;
   --color-background-dark: #000000;
+  --color-background-gray: #f9f5fb
 }
 
 /* tailwind component */
@@ -27,6 +25,8 @@
 }
 body {
   font-family: var(--font-display);
+    background-color: var(--color-background-gray);
+
 }
 header {
   background-color: #18181a;
@@ -60,6 +60,7 @@ main {
   /* position: relative; */
 }
 .container {
+  background-color: var(--color-background-light);
   border: 1px solid #b9b0b0;
   border-radius: 5px;
   width: 100%;
